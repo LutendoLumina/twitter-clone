@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;;
+}
+
+/* SIDEBAR SECTION */
+
+.logo {
+    width: 75px;
+    padding-left: 40px;
+    padding-top: 10px;
+}
+
+.sidebar {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    font-size: larger;
+    font-weight: 450;
+    padding-left: 100px;
+}
+
+.sidebar-item a {
+    /* display: flex;
+    align-items: center; */
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 1.3rem;
+    transition: 0.2s;
+}
+
+.sidebar-item a:hover {
+    background-color: #e7e7e7;
+}
+
+.post-button {
+    margin-top: 20px;
+}
+
+.post-button button {
+    width: 90%;
+    border-radius: 999px;
+    font-weight: bold;
+    padding: 12px;
+    background-color: black;
+}
+
+footer {
+    margin-top: 10px;
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    border-radius: 999px;
+    transition: 0.2s;
+}
+
+.profile-card:hover {
+    background-color: #e7e7e7;
+}
+
+.profile-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #7cb342;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.profile-name {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+.profile-handle {
+    color: #536471;
+    font-size: 0.95rem;
+    line-height: 1.2;
+}
