@@ -16,7 +16,7 @@
     <div class="container-fluid">
         <div class="row">
 
-            <!-- Sidebar -->
+            <!-- SIDEBAR SECTION -->
             <aside class="col-3 border-end sidebar">
 
                 <div class="logo">
@@ -98,7 +98,7 @@
                     </div>
 
                     <div class="post-button">
-                        <button class="btn btn-primary btn-lg">Post</button>
+                        <button class="btn btn-dark btn-lg">Post</button>
                     </div>
 
                     <footer>
@@ -120,13 +120,17 @@
                 </div>
             </aside>
 
-            <!-- Main Feed -->
+            <!-- Main SECTION -->
             <main class="col-6 main-feed p-0">
 
                 <!-- top bar -->
                 <div class="feed-header">
-                    <h5>For you</h5>
-                    <h5>Following</h5>
+
+                    <div class="feed-tabs">
+                        <div class="tab active">For you</div>
+                        <div class="tab">Following</div>
+                    </div>
+
                 </div>
 
                 <!-- post composer -->
@@ -137,11 +141,100 @@
                     </div>
 
                     <div class="composer-right">
-                        <textarea name="tweetInput" class="comp"></textarea>
+                        <textarea name="tweetInput" class="composer-input" placeholder="What's happening?"></textarea>
+
+                        <div class="composer-actions">
+
+                            <div class="composer-icons">
+                                <i class="bi bi-image"></i>
+                                <i class="bi bi-filetype-gif"></i>
+                                <i class="bi bi-bar-chart"></i>
+                                <i class="bi bi-emoji-smile"></i>
+                                <i class="bi bi-calendar-event"></i>
+                                <i class="bi bi-geo-alt"></i>
+                            </div>
+
+                            <div class="tweet-button">
+                                <button id="tweetBtn" class="btn btn-secondary rounded-pill px-4 fw-bold">Post</button>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
 
+                <div class="show-posts">
+                    <a href="#">Show 840 posts</a>
+                </div>
 
+                <div class="tweet-feed">
+                    <div class="tweet-card">
+
+                        <div class="tweet-left">
+                            <img src="assets/moe.jpg" alt="Profile" class="tweet-avatar">
+                        </div>
+
+                        <div class="tweet-right">
+
+                            <div class="tweet-top-row">
+
+                                <div class="tweet-user-info">
+                                    <span class="tweet-name">Minister of Electricity 🇿🇦</span>
+                                    <i class="bi bi-patch-check-fill verified-badge"></i>
+                                    <span class="tweet-handle">@VITO_G_Wagon</span>
+                                    <span class="tweet-dot">·</span>
+                                    <span class="tweet-time">10h</span>
+                                </div>
+
+                                <div class="tweet-top-icons">
+                                    <i class="bi bi-slash-circle"></i>
+                                    <i class="bi bi-three-dots"></i>
+                                </div>
+
+                            </div>
+
+                            <!-- TEXT -->
+                            <div class="tweet-text">
+                                Musa Khawula ?
+                            </div>
+
+                            <!-- IMAGE -->
+                            <div class="tweet-media">
+                                <img src="assets/kick-bucket.jpg" alt="Tweet image">
+                            </div>
+
+                            <!-- ACTIONS -->
+                            <div class="tweet-actions">
+
+                                <div class="tweet-action">
+                                    <i class="bi bi-chat"></i>
+                                    <span>44</span>
+                                </div>
+
+                                <div class="tweet-action">
+                                    <i class="bi bi-repeat"></i>
+                                    <span>23</span>
+                                </div>
+
+                                <div class="tweet-action">
+                                    <i class="bi bi-heart"></i>
+                                    <span>1.2K</span>
+                                </div>
+
+                                <div class="tweet-action">
+                                    <i class="bi bi-bar-chart"></i>
+                                    <span>214K</span>
+                                </div>
+
+                                <div class="tweet-action-group-right">
+                                    <i class="bi bi-bookmark"></i>
+                                    <i class="bi bi-box-arrow-up"></i>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
 
             </main>
 
