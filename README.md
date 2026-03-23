@@ -31,6 +31,10 @@ This project replicates the core UI and behavior of Twitter, including navigatio
 - Bootstrap 5
 - Bootstrap Icons
 
+---
+
+## 📂 Project Structure
+
 /project-root
 │── index.html
 │── style.css
@@ -117,5 +121,3 @@ A clean and scalable workflow aligned with real-world development practices.
 
 This project is for educational and portfolio purposes only.
 ---
-
-## 📂 Project Structure
