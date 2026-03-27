@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log out of X</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="logout.css">
+</head>
+
+<body>
+  <main class="logout-card">
+    <div class="x-logo">X</div>
+    <h1>Log out of X?</h1>
+    <p>
+      You can always log back in at any time. If you just want to switch accounts,
+      you can do that by adding an existing account.
+    </p>
+    <button id="confirmLogoutBtn" class="logout-btn" type="button">Log out</button>
+    <button id="cancelLogoutBtn" class="cancel-btn" type="button">Cancel</button>
+  </main>
+
+  <script>
+    const AUTH_SESSION_KEY = "twitterCloneSession";
+
+    document.getElementById("confirmLogoutBtn").addEventListener("click", function () {
+      localStorage.removeItem(AUTH_SESSION_KEY);
+      window.location.href = "login.html";
+    });
+
+    document.getElementById("cancelLogoutBtn").addEventListener("click", function () {
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+
+</html>

@@ -565,7 +565,6 @@ document.getElementById('subscribeBtn').addEventListener('click', () => {
 
 
 
-
 // ─── TODAY'S NEWS — ✕ DISMISS POPUP ──────────────────────────────────────────
 const newsCardX   = document.querySelector('.card-header-row .bi-x-lg');
 const newsCardRow = newsCardX?.closest('.card-header-row');

@@ -1,0 +1,90 @@
+/* X-style logout confirm */
+:root {
+  --bg-overlay: #1f2937;
+  --card-bg: #000000;
+  --text-main: #e7e9ea;
+  --text-muted: #71767b;
+  --border: #2f3336;
+  --white-btn-bg: #eff3f4;
+  --white-btn-text: #0f1419;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg-overlay);
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.logout-card {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 16px;
+  border: 1px solid #111;
+  background: var(--card-bg);
+  padding: 22px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+.x-logo {
+  text-align: center;
+  color: var(--text-main);
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+h1 {
+  color: var(--text-main);
+  font-size: 1.65rem;
+  font-weight: 800;
+  margin: 0 0 10px;
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  margin: 0 0 20px;
+}
+
+.logout-btn,
+.cancel-btn {
+  width: 100%;
+  border-radius: 999px;
+  padding: 12px 16px;
+  font-weight: 700;
+  border: 1px solid transparent;
+  transition: opacity .18s ease;
+}
+
+.logout-btn {
+  background: var(--white-btn-bg);
+  color: var(--white-btn-text);
+  margin-bottom: 10px;
+}
+
+.cancel-btn {
+  background: transparent;
+  color: var(--text-main);
+  border-color: var(--border);
+}
+
+.logout-btn:hover,
+.cancel-btn:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 360px) {
+  body { padding: 14px; }
+  .logout-card { padding: 18px; border-radius: 14px; }
+  h1 { font-size: 1.45rem; }
+}
