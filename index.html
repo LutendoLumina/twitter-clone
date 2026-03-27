@@ -17,8 +17,8 @@
     <div class="container-fluid">
         <div class="row">
 
-            <!-- Sidebar -->
-            <aside class="col-3 border-end sidebar">
+            <!-- SIDEBAR SECTION -->
+            <aside class="col-auto left-sidebar">
 
                 <div class="logo">
                     <a href="http://127.0.0.1:5500/index.html">
@@ -110,7 +110,7 @@
                     </div>
 
                     <div class="post-button">
-                        <button class="btn btn-primary btn-lg">Post</button>
+                        <button class="btn btn-dark btn-lg">Post</button>
                     </div>
 
                     <footer>
@@ -132,13 +132,17 @@
                 </div>
             </aside>
 
-            <!-- Main Feed -->
-            <main class="col-6 main-feed p-0">
+            <!-- Main SECTION -->
+            <main class="col-auto main-content ">
 
                 <!-- top bar -->
                 <div class="feed-header">
-                    <h5>For you</h5>
-                    <h5>Following</h5>
+
+                    <div class="feed-tabs">
+                        <div class="tab active">For you</div>
+                        <div class="tab">Following</div>
+                    </div>
+
                 </div>
 
                 <!-- post composer -->
@@ -149,494 +153,99 @@
                     </div>
 
                     <div class="composer-right">
-                        <textarea name="tweetInput" class="comp"></textarea>
-            <!-- Main SECTION -->
-            <main class="col-auto main-content">
+                        <textarea name="tweetInput" class="composer-input" placeholder="What's happening?"></textarea>
 
-                <!-- HOME -->
-                <section id="home" class="content-section active-section">
-                    <!-- top bar -->
-                    <div class="feed-header">
-                        <div class="feed-tabs">
-                            <div class="tab active">For you</div>
-                            <div class="tab">Following</div>
+                        <div class="composer-actions">
+
+                            <div class="composer-icons">
+                                <i class="bi bi-image"></i>
+                                <i class="bi bi-filetype-gif"></i>
+                                <i class="bi bi-bar-chart"></i>
+                                <i class="bi bi-emoji-smile"></i>
+                                <i class="bi bi-calendar-event"></i>
+                                <i class="bi bi-geo-alt"></i>
+                            </div>
+
+                            <div class="tweet-button">
+                                <button id="tweetBtn" class="btn btn-secondary rounded-pill px-4 fw-bold">Post</button>
+                            </div>
+
                         </div>
                     </div>
 
+                <div class="show-posts">
+                    <a href="#">Show 840 posts</a>
+                </div>
 
+                <div class="tweet-feed">
+                    <div class="tweet-card">
 
-            </main>
-
-            <!-- Right Panel -->
-            <section class="col-3 p-3">
-                <h3>Trends</h3>
-                    <!-- post composer -->
-                    <div class="composer">
-                        <div class="composer-left">
-                            <div class="composer-avatar">L</div>
+                        <div class="tweet-left">
+                            <img src="assets/moe.jpg" alt="Profile" class="tweet-avatar">
                         </div>
 
-                        <div class="composer-right">
-                            <textarea name="tweetInput" class="composer-input"
-                                placeholder="What's happening?"></textarea>
+                        <div class="tweet-right">
 
-                            <div class="composer-actions">
-                                <div class="composer-icons">
-                                    <i class="bi bi-image"></i>
-                                    <i class="bi bi-filetype-gif"></i>
+                            <div class="tweet-top-row">
+
+                                <div class="tweet-user-info">
+                                    <span class="tweet-name">Minister of Electricity 🇿🇦</span>
+                                    <i class="bi bi-patch-check-fill verified-badge"></i>
+                                    <span class="tweet-handle">@VITO_G_Wagon</span>
+                                    <span class="tweet-dot">·</span>
+                                    <span class="tweet-time">10h</span>
+                                </div>
+
+                                <div class="tweet-top-icons">
+                                    <i class="bi bi-slash-circle"></i>
+                                    <i class="bi bi-three-dots"></i>
+                                </div>
+
+                            </div>
+
+                            <!-- TEXT -->
+                            <div class="tweet-text">
+                                Musa Khawula ?
+                            </div>
+
+                            <!-- IMAGE -->
+                            <div class="tweet-media">
+                                <img src="assets/kick-bucket.jpg" alt="Tweet image">
+                            </div>
+
+                            <!-- ACTIONS -->
+                            <div class="tweet-actions">
+
+                                <div class="tweet-action">
+                                    <i class="bi bi-chat"></i>
+                                    <span>44</span>
+                                </div>
+
+                                <div class="tweet-action">
+                                    <i class="bi bi-repeat"></i>
+                                    <span>23</span>
+                                </div>
+
+                                <div class="tweet-action">
+                                    <i class="bi bi-heart"></i>
+                                    <span>1.2K</span>
+                                </div>
+
+                                <div class="tweet-action">
                                     <i class="bi bi-bar-chart"></i>
-                                    <i class="bi bi-emoji-smile"></i>
-                                    <i class="bi bi-calendar-event"></i>
-                                    <i class="bi bi-geo-alt"></i>
+                                    <span>214K</span>
                                 </div>
 
-                                <div class="tweet-button">
-                                    <button id="tweetBtn"
-                                        class="btn btn-secondary rounded-pill px-4 fw-bold">Post</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="show-posts">
-                        <a href="#">Show 840 posts</a>
-                    </div>
-
-                    <div class="tweet-feed">
-                        <div class="tweet-card">
-                            <div class="tweet-left">
-                                <img src="assets/moe.jpg" alt="Profile" class="tweet-avatar">
-                            </div>
-
-                            <div class="tweet-right">
-                                <div class="tweet-top-row">
-                                    <div class="tweet-user-info">
-                                        <span class="tweet-name">Minister of Electricity 🇿🇦</span>
-                                        <i class="bi bi-patch-check-fill verified-badge"></i>
-                                        <span class="tweet-handle">@VITO_G_Wagon</span>
-                                        <span class="tweet-dot">·</span>
-                                        <span class="tweet-time">10h</span>
-                                    </div>
-
-                                    <div class="tweet-top-icons">
-                                        <i class="bi bi-slash-circle"></i>
-                                        <i class="bi bi-three-dots"></i>
-                                    </div>
+                                <div class="tweet-action-group-right">
+                                    <i class="bi bi-bookmark"></i>
+                                    <i class="bi bi-box-arrow-up"></i>
                                 </div>
 
-                                <div class="tweet-text">
-                                    Musa Khawula ?
-                                </div>
-
-                                <div class="tweet-media">
-                                    <img src="assets/kick-bucket.jpg" alt="Tweet image">
-                                </div>
-
-                                <div class="tweet-actions">
-                                    <div class="tweet-action">
-                                        <i class="bi bi-chat"></i>
-                                        <span>44</span>
-                                    </div>
-
-                                    <div class="tweet-action">
-                                        <i class="bi bi-repeat"></i>
-                                        <span>23</span>
-                                    </div>
-
-                                    <div class="tweet-action">
-                                        <i class="bi bi-heart"></i>
-                                        <span>1.2K</span>
-                                    </div>
-
-                                    <div class="tweet-action">
-                                        <i class="bi bi-bar-chart"></i>
-                                        <span>214K</span>
-                                    </div>
-
-                                    <div class="tweet-action-group-right">
-                                        <i class="bi bi-bookmark"></i>
-                                        <i class="bi bi-box-arrow-up"></i>
-                                    </div>
-                                </div>
                             </div>
-                        </div>
-                    </div>
-                </section>
 
-                <!-- EXPLORE -->
-                <section id="explore" class="content-section">
-                    <div class="page-header explore-header">
-                        <div class="explore-search-row">
-                            <div class="explore-search-wrap">
-                                <i class="bi bi-search explore-search-icon"></i>
-                                <input type="text" class="explore-search-input" placeholder="Search">
-                            </div>
-                            <button class="explore-settings-btn"><i class="bi bi-gear"></i></button>
-                        </div>
-                        <div class="explore-tabs">
-                            <div class="explore-tab active">For You</div>
-                            <div class="explore-tab">Trending</div>
-                            <div class="explore-tab">News</div>
-                            <div class="explore-tab">Sports</div>
-                            <div class="explore-tab">Entertainment</div>
                         </div>
                     </div>
-
-                    <!-- Promoted banner -->
-                    <div class="explore-promoted">
-                        <div class="explore-promoted-inner">
-                            <button class="explore-promoted-dots"><i class="bi bi-three-dots"></i></button>
-                            <div class="explore-promoted-text">
-                                <div class="explore-promoted-tag">#BuyGalaxyS26Now</div>
-                                <div class="explore-promoted-sub">Get the new Galaxy today and experience the latest tech first</div>
-                                <div class="explore-promoted-by"><i class="bi bi-box-arrow-up-right"></i> Promoted by Samsung Mobile SA</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Today's News -->
-                    <div class="explore-section-title">Today's News</div>
-
-                    <div class="explore-news-item">
-                        <div class="explore-news-text">
-                            <h4>Fans Rally Around L'vovo Derrango's Stroke Recovery Journey</h4>
-                            <div class="news-meta-with-images">
-                                <div class="mini-avatars">
-                                    <img src="assets/moe.jpg" alt="avatar">
-                                    <img src="assets/moe.jpg" alt="avatar">
-                                </div>
-                                <span>17 hours ago · Entertainment · 1.5K posts</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="explore-news-item">
-                        <div class="explore-news-text">
-                            <h4>Labour Lawyer Chinette Gallichan Gunned Down Outside Johannesburg CCMA</h4>
-                            <div class="news-meta-with-images">
-                                <div class="mini-avatars">
-                                    <img src="assets/moe.jpg" alt="avatar">
-                                    <img src="assets/moe.jpg" alt="avatar">
-                                </div>
-                                <span>1 day ago · Other · 29K posts</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="explore-news-item">
-                        <div class="explore-news-text">
-                            <h4>Fatal High-Speed Motorcycle Crash Caught on CCTV in Luhansk</h4>
-                            <div class="news-meta-with-images">
-                                <div class="mini-avatars">
-                                    <img src="assets/moe.jpg" alt="avatar">
-                                    <img src="assets/moe.jpg" alt="avatar">
-                                </div>
-                                <span>1 day ago · Other · 15K posts</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="explore-section-title" style="margin-top:8px;">Trending in South Africa</div>
-
-                    <div class="explore-trend-item">
-                        <div class="explore-trend-left">
-                            <div class="explore-trend-meta">Trending in South Africa</div>
-                            <div class="explore-trend-name">Maboe</div>
-                            <div class="explore-trend-count">14.2K posts</div>
-                        </div>
-                        <button class="explore-trend-dots"><i class="bi bi-three-dots"></i></button>
-                    </div>
-
-                    <div class="explore-trend-item">
-                        <div class="explore-trend-left">
-                            <div class="explore-trend-meta">Entertainment · Trending</div>
-                            <div class="explore-trend-name">Carter Efe</div>
-                            <div class="explore-trend-count">8.9K posts</div>
-                        </div>
-                        <button class="explore-trend-dots"><i class="bi bi-three-dots"></i></button>
-                    </div>
-
-                    <div class="explore-trend-item">
-                        <div class="explore-trend-left">
-                            <div class="explore-trend-meta">Trending in South Africa</div>
-                            <div class="explore-trend-name">SWEET GULUVA X MXSFESTIVAL</div>
-                            <div class="explore-trend-count">5.3K posts</div>
-                        </div>
-                        <button class="explore-trend-dots"><i class="bi bi-three-dots"></i></button>
-                    </div>
-
-                    <div class="explore-trend-item">
-                        <div class="explore-trend-left">
-                            <div class="explore-trend-meta">Politics · Trending</div>
-                            <div class="explore-trend-name">EFF</div>
-                            <div class="explore-trend-count">22.5K posts</div>
-                        </div>
-                        <button class="explore-trend-dots"><i class="bi bi-three-dots"></i></button>
-                    </div>
-
-                    <div class="explore-trend-item">
-                        <div class="explore-trend-left">
-                            <div class="explore-trend-meta">Sports · Trending</div>
-                            <div class="explore-trend-name">Thembinkosi Lorch</div>
-                            <div class="explore-trend-count">2.7K posts</div>
-                        </div>
-                        <button class="explore-trend-dots"><i class="bi bi-three-dots"></i></button>
-                    </div>
-                </section>
-
-                <!-- NOTIFICATIONS -->
-                <section id="notifications" class="content-section">
-                    <div class="page-header notif-header">
-                        <div class="notif-header-row">
-                            <span>Notifications</span>
-                            <button class="notif-settings-btn"><i class="bi bi-gear"></i></button>
-                        </div>
-                        <div class="notif-tabs">
-                            <div class="notif-tab active" data-notif="all">All</div>
-                            <div class="notif-tab" data-notif="mentions">Mentions</div>
-                        </div>
-                    </div>
-                    <div class="notif-empty" id="notifAllEmpty">
-                        <h2>Nothing to see here — yet</h2>
-                        <p>Likes, follows, reposts and mentions will show up here.</p>
-                    </div>
-                    <div class="notif-empty hidden" id="notifMentionsEmpty">
-                        <h2>Nothing to see here — yet</h2>
-                        <p>When someone mentions you, you'll find it here.</p>
-                    </div>
-                </section>
-
-                <!-- FOLLOW -->
-                <section id="follow" class="content-section">
-                    <div class="page-header follow-page-header">
-                        <div class="follow-header-row">
-                            <button class="follow-back-btn" onclick="navigateTo('home')"><i class="bi bi-arrow-left"></i></button>
-                            <span>Follow</span>
-                            <button class="follow-settings-btn"><i class="bi bi-gear"></i></button>
-                        </div>
-                        <div class="follow-page-tabs">
-                            <div class="follow-page-tab active">Who to follow</div>
-                            <div class="follow-page-tab">Creators for you</div>
-                        </div>
-                    </div>
-
-                    <div class="follow-page-section-title">Suggested for you</div>
-
-                    <div class="follow-page-item">
-                        <img src="assets/moe.jpg" class="follow-page-avatar" alt="Amanda">
-                        <div class="follow-page-info">
-                            <div class="follow-page-name">Amanda du-Pont <i class="bi bi-patch-check-fill verified-badge"></i></div>
-                            <div class="follow-page-handle">@AmandaDupont</div>
-                            <div class="follow-page-bio">ACTRESS | CHILD OF GOD | CEO AND FOUNDER OF <span style="color:#1d9bf0">@lelive_africa</span> SKINCARE</div>
-                        </div>
-                        <button class="btn follow-btn follow-page-btn">Follow</button>
-                    </div>
-
-                    <div class="follow-page-item">
-                        <img src="assets/moe.jpg" class="follow-page-avatar" alt="Tyler">
-                        <div class="follow-page-info">
-                            <div class="follow-page-name">T <i class="bi bi-patch-check-fill verified-badge"></i></div>
-                            <div class="follow-page-handle">@tylerthecreator</div>
-                        </div>
-                        <button class="btn follow-btn follow-page-btn">Follow</button>
-                    </div>
-
-                    <div class="follow-page-item">
-                        <img src="assets/moe.jpg" class="follow-page-avatar" alt="Lil Baby">
-                        <div class="follow-page-info">
-                            <div class="follow-page-name">Lil Baby <i class="bi bi-patch-check-fill verified-badge"></i></div>
-                            <div class="follow-page-handle">@whamcbfw4</div>
-                            <div class="follow-page-bio">THE KIDD</div>
-                        </div>
-                        <button class="btn follow-btn follow-page-btn">Follow</button>
-                    </div>
-
-                    <div class="follow-page-item">
-                        <img src="assets/moe.jpg" class="follow-page-avatar" alt="Taylor Swift">
-                        <div class="follow-page-info">
-                            <div class="follow-page-name">Taylor Swift <i class="bi bi-patch-check-fill verified-badge"></i></div>
-                            <div class="follow-page-handle">@taylorswift13</div>
-                            <div class="follow-page-bio">And, baby, that's show business for you. New album The Life of a Showgirl. Available Now 🎁</div>
-                        </div>
-                        <button class="btn follow-btn follow-page-btn">Follow</button>
-                    </div>
-
-                    <div class="follow-page-item">
-                        <img src="assets/moe.jpg" class="follow-page-avatar" alt="Daily Mail">
-                        <div class="follow-page-info">
-                            <div class="follow-page-name">Daily Mail Celebrity <i class="bi bi-patch-check-fill" style="color:#f4a926;font-size:.9rem"></i></div>
-                            <div class="follow-page-handle">@DailyMailCeleb</div>
-                            <div class="follow-page-bio">Latest celeb and entertainment news from the Daily Mail Showbiz team.</div>
-                        </div>
-                        <button class="btn follow-btn follow-page-btn">Follow</button>
-                    </div>
-
-                    <div class="follow-page-item">
-                        <img src="assets/moe.jpg" class="follow-page-avatar" alt="Ayra Starr">
-                        <div class="follow-page-info">
-                            <div class="follow-page-name">Celestial being <i class="bi bi-patch-check-fill verified-badge"></i></div>
-                            <div class="follow-page-handle">@ayrastarr</div>
-                            <div class="follow-page-bio">Celestial being 🌟⭐</div>
-                        </div>
-                        <button class="btn follow-btn follow-page-btn">Follow</button>
-                    </div>
-                </section>
-
-                <!-- CHAT -->
-                <section id="chat" class="content-section">
-                    <div class="chat-welcome">
-                        <div class="chat-welcome-content">
-                            <h2>Welcome to the new X Chat</h2>
-                            <div class="chat-feature">
-                                <i class="bi bi-lock"></i>
-                                <div>
-                                    <div class="chat-feature-title">End-to-End Encryption</div>
-                                    <div class="chat-feature-desc">Messages are end-to-end encrypted across all your devices.</div>
-                                </div>
-                            </div>
-                            <div class="chat-feature">
-                                <i class="bi bi-shield-check"></i>
-                                <div>
-                                    <div class="chat-feature-title">State-of-the-Art Privacy</div>
-                                    <div class="chat-feature-desc">There's no way for anyone, including X, to read your messages.</div>
-                                </div>
-                            </div>
-                            <div class="chat-feature">
-                                <i class="bi bi-grid-3x3"></i>
-                                <div>
-                                    <div class="chat-feature-title">Set Passcode</div>
-                                    <div class="chat-feature-desc">In order to secure your messages, you'll need to set up a passcode.</div>
-                                </div>
-                            </div>
-                            <button class="chat-passcode-btn">Create Passcode</button>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- GROK -->
-                <section id="grok" class="content-section">
-                    <div class="grok-topbar">
-                        <button class="grok-topbar-btn"><i class="bi bi-clock-history"></i> History</button>
-                        <button class="grok-topbar-btn"><i class="bi bi-lock"></i> Private</button>
-                    </div>
-                    <div class="grok-body">
-                        <div class="grok-logo">
-                            <i class="bi bi-slash-circle" style="font-size:2rem"></i>
-                            <span>Grok</span>
-                        </div>
-                        <div class="grok-input-wrap">
-                            <button class="grok-attach-btn"><i class="bi bi-paperclip"></i></button>
-                            <input type="text" class="grok-input" placeholder="Ask anything">
-                            <div class="grok-input-right">
-                                <span class="grok-auto">Auto <i class="bi bi-chevron-down"></i></span>
-                                <button class="grok-mic-btn"><i class="bi bi-soundwave"></i></button>
-                            </div>
-                        </div>
-                        <div class="grok-chips">
-                            <button class="grok-chip"><i class="bi bi-images"></i> Create Images</button>
-                            <button class="grok-chip"><i class="bi bi-pencil"></i> Edit Image</button>
-                            <button class="grok-chip"><i class="bi bi-newspaper"></i> Latest News</button>
-                        </div>
-                    </div>
-                    <div class="grok-explore-banner">
-                        <div class="grok-explore-left">
-                            <i class="bi bi-soundwave" style="font-size:1.2rem;color:#0f1419"></i>
-                            <div>
-                                <div class="grok-explore-title">Talk to Grok</div>
-                                <div class="grok-explore-sub">Get access to more features on grok.com</div>
-                            </div>
-                        </div>
-                        <button class="grok-explore-btn">Explore</button>
-                    </div>
-                </section>
-
-                <!-- BOOKMARKS -->
-                <section id="bookmarks" class="content-section">
-                    <div class="page-header bookmarks-header">
-                        <div class="bookmarks-header-row">
-                            <button class="follow-back-btn" onclick="navigateTo('home')"><i class="bi bi-arrow-left"></i></button>
-                            <span>Bookmarks</span>
-                        </div>
-                        <div class="bookmarks-search-wrap">
-                            <i class="bi bi-search"></i>
-                            <input type="text" placeholder="Search Bookmarks" class="bookmarks-search-input">
-                        </div>
-                    </div>
-                    <div class="bookmarks-empty" id="bookmarksEmpty">
-                        <h2>Save posts for later</h2>
-                        <p>Bookmark posts to easily find them again in the future.</p>
-                    </div>
-                    <div id="bookmarksFeed" class="tweet-feed"></div>
-                </section>
-
-                <!-- PREMIUM -->
-                <section id="premium" class="content-section page-placeholder">
-                    <div class="page-header">Premium</div>
-                    <div class="page-body">
-                        <h2>Premium</h2>
-                        <p>Premium features, subscription details, and tools will appear here.</p>
-                    </div>
-                </section>
-
-                <!-- PROFILE -->
-                <section id="profile" class="content-section">
-                    <div class="page-header profile-header">
-                        <div class="profile-header-row">
-                            <button class="follow-back-btn" onclick="navigateTo('home')"><i class="bi bi-arrow-left"></i></button>
-                            <div>
-                                <div style="font-size:1.1rem;font-weight:800;line-height:1.2">Lumina</div>
-                                <div style="font-size:0.82rem;color:#536471" id="profilePostCount">0 posts</div>
-                            </div>
-                            <button class="notif-settings-btn"><i class="bi bi-search"></i></button>
-                        </div>
-                    </div>
-                    <div class="profile-banner"></div>
-                    <div class="profile-info-section">
-                        <div class="profile-avatar-row">
-                            <div class="profile-big-avatar">L</div>
-                            <button class="profile-edit-btn">Edit profile</button>
-                        </div>
-                        <div class="profile-name-block">
-                            <div class="profile-display-name">Lumina
-                                <button class="profile-verify-badge"><i class="bi bi-patch-check-fill" style="color:#1d9bf0;font-size:.9rem"></i> Get verified</button>
-                            </div>
-                            <div class="profile-at-handle">@LuthandoPrecio3</div>
-                            <div class="profile-joined"><i class="bi bi-calendar3"></i> Joined October 2021 <i class="bi bi-chevron-right" style="font-size:.7rem"></i></div>
-                            <div class="profile-stats">
-                                <span><strong>26</strong> Following</span>
-                                <span><strong>0</strong> Followers</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="profile-content-tabs">
-                        <div class="profile-tab active">Posts</div>
-                        <div class="profile-tab">Replies</div>
-                        <div class="profile-tab">Highlights</div>
-                        <div class="profile-tab">Articles</div>
-                        <div class="profile-tab">Media</div>
-                        <div class="profile-tab">Likes</div>
-                    </div>
-                    <div id="profileFeed" class="tweet-feed"></div>
-                    <div class="profile-empty" id="profileEmpty">
-                        <h3>No posts yet</h3>
-                        <p>When you post, it'll show up here.</p>
-                    </div>
-                </section>
-
-                <!-- MORE -->
-                <section id="more" class="content-section">
-                    <div class="page-header" style="padding:16px 20px;font-size:1.15rem;font-weight:800;border-bottom:1px solid #eff3f4;">More</div>
-                    <div class="more-list">
-                        <div class="more-item"><i class="bi bi-list-ul"></i> Lists</div>
-                        <div class="more-item"><i class="bi bi-people"></i> Communities</div>
-                        <div class="more-item"><i class="bi bi-broadcast"></i> Spaces</div>
-                        <div class="more-item"><i class="bi bi-bar-chart"></i> Creator Studio</div>
-                        <div class="more-item"><i class="bi bi-person-badge"></i> Professional Tools</div>
-                        <div class="more-item more-item-divider"><i class="bi bi-gear"></i> Settings and privacy</div>
-                        <div class="more-item"><i class="bi bi-question-circle"></i> Help Center</div>
-                        <div class="more-item"><i class="bi bi-keyboard"></i> Keyboard shortcuts</div>
-                    </div>
-                </section>
+                </div>
 
             </main>
 
@@ -796,8 +405,7 @@
                         <a href="https://x.com/en/privacy" target="_blank">Privacy Policy |</a>
                         <a href="https://help.x.com/en/rules-and-policies/x-cookies" target="_blank">Cookie Policy |</a>
                         <a href="https://help.x.com/en/resources/accessibility" target="_blank">Accessibility |</a>
-                        <a href="https://business.x.com/en/help/troubleshooting/how-x-ads-work" target="_blank">Ads info
-                            |</a>
+                        <a href="https://business.x.com/en/help/troubleshooting/how-x-ads-work" target="_blank">Ads info |</a>
                         <a href="#" target="_blank">More ...</a>
                         <span>© 2026 X Corp.</span>
                     </div>

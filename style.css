@@ -4,20 +4,19 @@
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
+/* body {
+    font-size: 15px;
+    color: #0f1419;
+} */
 
 /* SIDEBAR SECTION */
-<<<<<<< Updated upstream
-
 .logo {
     width: 75px;
     padding-left: 40px;
     padding-top: 10px;
 }
 
-.sidebar {
-=======
 .left-sidebar {
->>>>>>> Stashed changes
     height: 100vh;
     position: sticky;
     top: 0;
@@ -165,8 +164,6 @@ footer {
     font-size: 0.82rem;
     line-height: 1.1;
 }
-<<<<<<< Updated upstream
-=======
 
 .post-button,
 footer {
@@ -174,6 +171,407 @@ footer {
 }
 
 
+
+/* MAIN SECTION */
+.main-content {
+    min-height: 100vh;
+    border-left: 1px solid #e6ecf0;
+    border-right: 1px solid #e6ecf0;
+    background-color: #fff;
+    width: 650px;
+    max-width: 650px;
+}
+
+.feed-header {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.feed-tabs {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Tabs container */
+.feed-tabs {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Each tab */
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 16px 0;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    color: #536471;
+}
+
+/* Active tab */
+.tab.active {
+    font-weight: 700;
+    color: black;
+}
+
+/* Blue underline */
+.tab.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    width: 40%;
+    height: 4px;
+    background-color: #1d9bf0;
+    border-radius: 10px;
+}
+
+.composer {
+    display: flex;
+    gap: 12px;
+    padding: 16px 20px;
+    border-bottom: 1px solid #e6ecf0;
+}
+
+.composer-avatar,
+.tweet-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #7cb342;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.composer-right {
+    flex: 1;
+}
+
+.composer-input {
+    width: 100%;
+    min-height: 90px;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 1.3rem;
+    padding: 8px 0;
+}
+
+.composer-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12px;
+    border-top: 1px solid #e6ecf0;
+}
+
+.composer-icons {
+    display: flex;
+    gap: 14px;
+    color: #1d9bf0;
+    font-size: 1.1rem;
+}
+
+.show-posts {
+    border-top: 1px solid #e6ecf0;
+    border-bottom: 1px solid #e6ecf0;
+    text-align: center;
+    background-color: #fff;
+    transition: 0.2s;
+}
+
+.show-posts a {
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #1d9bf0;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.show-posts:hover {
+    background-color: #f7f9f9;
+}
+
+/* tweet feed */
+.tweet-card {
+    display: flex;
+    gap: 12px;
+    padding: 14px 16px;
+    border-bottom: 1px solid #e6ecf0;
+    background-color: #fff;
+}
+
+.tweet-left {
+    flex-shrink: 0;
+}
+
+.tweet-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.tweet-right {
+    flex: 1;
+    min-width: 0;
+}
+
+.tweet-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.tweet-user-info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    min-width: 0;
+}
+
+.tweet-name {
+    font-weight: 700;
+    color: #0f1419;
+}
+
+.tweet-handle,
+.tweet-time,
+.tweet-dot {
+    color: #536471;
+}
+
+.verified-badge {
+    color: #1d9bf0;
+    font-size: 0.95rem;
+}
+
+.tweet-top-icons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #536471;
+    flex-shrink: 0;
+}
+
+.tweet-top-icon {
+    cursor: pointer;
+}
+
+.tweet-text {
+    font-size: 1.05rem;
+    line-height: 1.45;
+    color: #0f1419;
+    margin-bottom: 8px;
+    word-break: break-word;
+}
+
+.tweet-media img {
+    width: 100%;
+    border-radius: 16px;
+    margin-top: 10px;
+    object-fit: cover;
+    max-height: 500px;
+}
+
+.tweet-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #536471;
+    font-size: 0.95rem;
+    padding-right: 8px;
+    margin-top: 10px;
+}
+
+.tweet-action {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.tweet-action-group-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.tweet-action.icon-only {
+    gap: 0;
+}
+
+/* RIGHT SIDEBAR */
+
+.right-sidebar {
+    background-color: #fff;
+    padding: 12px 16px;
+    width: 350px;
+}
+
+.right-sidebar-inner {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.search-box {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background-color: #fff;
+    padding: 12px 0;
+    margin-bottom: 12px;
+    padding-top: 1px;
+}
+
+.search-box input {
+    width: 100%;
+    height: 44px;
+    border: 1px solid #cfd9de;
+    border-radius: 999px;
+    padding: 0 18px 0 48px;
+    font-size: 1rem;
+    outline: none;
+    background-color: #fff;
+}
+
+.search-box input::placeholder {
+    color: #536471;
+}
+
+.search-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #536471;
+    font-size: 1.1rem;
+}
+
+.sidebar-card {
+    background-color: #fff;
+    border: 1px solid #e6ecf0;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.sidebar-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #0f1419;
+    margin: 0;
+}
+
+.premium-card {
+    padding: 22px 24px;
+}
+
+.premium-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.premium-card p {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #0f1419;
+    margin-bottom: 18px;
+}
+
+.discount-badge {
+    background-color: #c8f7d2;
+    color: #0b7a4b;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.subscribe-btn {
+    background-color: #1d9bf0;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    font-weight: 700;
+    padding: 10px 22px;
+    font-size: 1.05rem;
+}
+
+.subscribe-btn:hover {
+    background-color: #1a8cd8;
+    color: #fff;
+}
+
+.news-card {
+    padding-top: 18px;
+}
+
+.card-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 22px 18px;
+}
+
+.card-header-row i {
+    font-size: 1.4rem;
+    color: #0f1419;
+    cursor: pointer;
+}
+
+.profile-name {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+.profile-handle {
+    color: #536471;
+    font-size: 0.95rem;
+    line-height: 1.45;
+    margin: 6px 0 6px;
+}
+
+.promoted-by {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.trend-item h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0f1419;
+    line-height: 1.35;
+    margin-top: 4px;
+}
+
+.show-more-link {
+    display: block;
+    padding: 18px 22px 20px;
+    text-decoration: none;
+    color: #1d9bf0;
+    font-size: 1rem;
+}
 
 /* MAIN SECTION */
 .main-content {
@@ -726,46 +1124,3 @@ footer {
 .right-sidebar-footer a:hover {
     text-decoration: underline;
 }
-
-.content-section {
-    display: none;
-    min-height: 100vh;
-}
-
-.content-section.active-section {
-    display: block;
-}
-
-.active-nav .sidebar-link span{
-    font-weight: 700;
-}
-
-.page-header {
-    position: sticky;
-    top: 0;
-    z-index: 30;
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid #eff3f4;
-    padding: 16px 20px;
-    font-size: 20px;
-    font-weight: 800;
-}
-
-.page-body {
-    padding: 24px 20px;
-}
-
-.page-body h2 {
-    font-size: 24px;
-    font-weight: 800;
-    margin-bottom: 8px;
-}
-
-.page-body p {
-    font-size: 15px;
-    color: #536471;
-    margin: 0;
-}
->>>>>>> Stashed changes

@@ -1,0 +1,302 @@
+/* Improve text rendering on high DPI */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Ensure media never overflows */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile-only UI elements are hidden on larger screens */
+.mobile-topbar,
+.mobile-bottom-nav,
+.mobile-compose-fab {
+  display: none;
+}
+
+/* Make overall frame breathe on ultrawide / 4K */
+@media (min-width: 1600px) {
+  .app-frame {
+    max-width: 1480px !important;
+  }
+
+  .left-sidebar {
+    width: 320px;
+  }
+
+  .right-sidebar {
+    width: 390px;
+    min-width: 390px;
+  }
+
+  .main-content {
+    max-width: 680px;
+    width: 680px;
+    min-width: 680px;
+  }
+}
+
+/* Standard desktops / laptops */
+@media (max-width: 1200px) {
+  .right-sidebar {
+    display: none;
+  }
+
+  .main-content {
+    max-width: 640px;
+    width: 640px;
+    min-width: 0;
+  }
+}
+
+
+.feather-svg {
+  display: none;
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+/* Tablet and small desktops */
+@media (max-width: 992px) {
+  .left-sidebar {
+    width: 72px !important; 
+    height: 100vh !important;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 0;
+  }
+
+  .sidebar-item:has(a[data-section="bookmarks"]){
+    display: none !important;
+  }
+
+  .sidebar-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .sidebar-item a {
+    justify-content: center;
+    padding: 12px 0;
+  }
+
+  .sidebar-item a i, 
+  .sidebar-item a img {
+    margin-right: 0 !important;
+    font-size: 1.75rem;
+  }
+
+  .sidebar-item a span {
+    display: none !important; 
+  }
+
+  /* The Feather Button */
+  .post-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .post-button button {
+    width: 52px;
+    height: 52px;
+    border-radius: 50% !important;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1d9bf0 !important;
+  }
+
+  .post-text {
+    display: none !important;
+  }
+
+  .feather-svg {
+    display: block !important;
+  }
+
+  footer {
+    margin-top: auto;
+    padding-bottom: 20px;
+  }
+
+  .profile-info, 
+  .profile-more {
+    display: none !important;
+  }
+}
+
+
+/* Phones: hide left sidebar; feed takes full width */
+@media (max-width: 576px) {
+  .app-shell {
+    justify-content: flex-start !important;
+  }
+
+  .app-frame {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .left-sidebar {
+    display: none;
+  }
+
+  .main-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-left: none;
+    border-right: none;
+    padding-bottom: 78px;
+  }
+
+  .right-sidebar {
+    display: none;
+  }
+
+  .mobile-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border-color);
+    background: var(--bg-primary);
+    position: sticky;
+    top: 0;
+    z-index: 45;
+  }
+
+  .mobile-topbar-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--green-avatar);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+  }
+
+  .mobile-topbar-logo {
+    width: 26px;
+    height: 26px;
+  }
+
+  [data-theme="dark"] .mobile-topbar-logo {
+    filter: invert(1);
+  }
+
+  .mobile-topbar-action {
+    border: none;
+    background: none;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .feed-header,
+  .page-header {
+    position: sticky;
+    top: 55px;
+  }
+
+  .tweet-card {
+    padding: 12px 12px;
+  }
+
+  .tweet-text {
+    font-size: 1rem;
+  }
+
+  .composer {
+    display: none;
+  }
+
+  .composer-icons {
+    gap: 12px;
+  }
+
+  .show-posts {
+    display: none;
+  }
+
+  .composer-image-preview img {
+    max-width: 100%;
+    max-height: 260px;
+  }
+
+  .mobile-bottom-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 56px;
+    background: var(--bg-primary);
+    border-top: 1px solid var(--border-color);
+    z-index: 70;
+  }
+
+  .mobile-nav-link {
+    border: none;
+    background: none;
+    color: var(--text-primary);
+    font-size: 1.45rem;
+    width: 20%;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-nav-link.active {
+    color: var(--blue);
+  }
+
+  [data-theme="dark"] .mobile-nav-link {
+    color: var(--text-primary) !important;
+  }
+
+  [data-theme="dark"] .mobile-nav-link.active {
+    color: var(--blue) !important;
+  }
+
+  .mobile-compose-fab {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    position: fixed;
+    right: 18px;
+    bottom: 72px;
+    background: var(--blue);
+    color: #fff;
+    font-size: 1.45rem;
+    box-shadow: 0 8px 20px rgba(29, 155, 240, 0.35);
+    z-index: 75;
+  }
+}
+
